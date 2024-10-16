@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #149659; /* Neutral mode background */
+  color: #149659; /* Neutral mode text color */
+}
+
+body h1 {
+  color: #494949
+}
+.dark-mode {
+  background-color: #000000; /* Dark mode background */
+  color: #000000; /* Dark mode text color */
+
+  /* Dark mode tab panel background */
+  .headlessui-tabs-panel {
+    background-color: #382424;
+  }
+}
+.dark-mode h1 {
+
+  color: #a1a1a1; /* Dark mode text color */
+
+  /* Dark mode tab panel background */
+  .headlessui-tabs-panel {
+    background-color: #382424;
+  }
+}
+
+.light-mode {
+  background-color: #fff; /* Light mode background */
+  color: #222; /* Light mode text color */
+
+  /* Light mode tab panel background */
+  .headlessui-tabs-panel {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Neutral mode tab panel background */
+.headlessui-tabs-panel {
+  background-color: #858585;
+}
