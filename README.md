@@ -1,6 +1,6 @@
 # Team Schedule - Project Management Application
 
-This is a Next.js-based project management application that helps solo developers organize their project tasks, calendar, and other project management tools.
+This is a Next.js-based project management application that helps solo developers organize their project tasks, calendar, and other project management tools. for use locally, or in a webpage with access controls as everything is editable, deletable, and unprotected otherwise.
 
 ## Features
 
