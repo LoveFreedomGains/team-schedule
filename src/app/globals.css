@@ -2,44 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
 body {
-  background-color: #149659; /* Neutral mode background */
-  color: #149659; /* Neutral mode text color */
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
-body h1 {
-  color: #494949
-}
-.dark-mode {
-  background-color: #000000; /* Dark mode background */
-  color: #000000; /* Dark mode text color */
-
-  /* Dark mode tab panel background */
-  .headlessui-tabs-panel {
-    background-color: #382424;
-  }
-}
-.dark-mode h1 {
-
-  color: #a1a1a1; /* Dark mode text color */
-
-  /* Dark mode tab panel background */
-  .headlessui-tabs-panel {
-    background-color: #382424;
-  }
+.toolbar-button {
+  @apply flex items-center justify-center p-2 rounded hover:bg-gray-300 transition-colors duration-200;
+  @apply text-gray-700 hover:text-gray-900;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
 }
 
-.light-mode {
-  background-color: #fff; /* Light mode background */
-  color: #222; /* Light mode text color */
-
-  /* Light mode tab panel background */
-  .headlessui-tabs-panel {
-    background-color: #f9f9f9;
-  }
-}
-
-/* Neutral mode tab panel background */
-.headlessui-tabs-panel {
-  background-color: #858585;
+.toolbar-button:disabled {
+  @apply opacity-50 cursor-not-allowed hover:bg-transparent;
 }
